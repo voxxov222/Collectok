@@ -22,8 +22,8 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function RootStackNavigator() {
-  const screenOptions = useScreenOptions();
   const { user, isLoading, isOnboarded } = useAuth();
+  const screenOptions = useScreenOptions();
   const { theme } = useTheme();
 
   if (isLoading) {

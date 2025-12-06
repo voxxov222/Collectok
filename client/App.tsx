@@ -14,6 +14,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AuthProvider } from "@/contexts/AuthContext";
 
 export default function App() {
+  console.log("App component rendering");
+  
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>

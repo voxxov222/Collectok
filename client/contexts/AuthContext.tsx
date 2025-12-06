@@ -34,6 +34,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     loadAuth();
   }, []);
 
+  // For development, set loading to false after a timeout if it gets stuck
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (isLoading) {
+        setIsLoading(false);
+      }
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, [isLoading]);
+
+
   const loadAuth = async () => {
     try {
       const [authData, onboardedData] = await Promise.all([
