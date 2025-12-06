@@ -59,11 +59,11 @@ export function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
 
       <View style={styles.content}>
         <ThemedText type="h1" style={styles.title}>
-          Something went wrong
+          Oops! CollecTok hit a snag
         </ThemedText>
 
         <ThemedText type="body" style={styles.message}>
-          Please reload the app to continue.
+          Something unexpected happened. Tap below to get back to discovering amazing content.
         </ThemedText>
 
         <Pressable
@@ -81,7 +81,7 @@ export function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
             type="body"
             style={[styles.buttonText, { color: theme.buttonText }]}
           >
-            Try Again
+            Restart CollecTok
           </ThemedText>
         </Pressable>
       </View>
